@@ -23,3 +23,8 @@
 .blok4 {
     background-color: yellow;
 }
+.img{
+    width: 200px;
+    height: auto;
+    margin: 10px;
+}
