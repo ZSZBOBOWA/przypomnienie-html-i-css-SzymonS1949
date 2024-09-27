@@ -28,3 +28,13 @@
     height: auto;
     margin: 10px;
 }
+table {
+    width: 50%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+th, td {
+    padding: 8px 12px;
+    text-align: left;
+}

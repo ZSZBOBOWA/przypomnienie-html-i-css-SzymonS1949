@@ -1,3 +1,32 @@
+main {
+    display: flex;
+    flex-wrap: wrap;    
+}
+
+main img {
+    display: inline-block;
+    width: 250px;
+    height: auto;
+    margin-bottom: 10px;
+    filter: brightness(100%);
+    transition: filter 0.3s;
+}
+
+main img:hover {
+    filter: brightness(70%);
+}
+
+main img:hover::after {
+    content: attr(alt);
+
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 10px;
+    font-size: 14px;
+}    
 header {
     display: flex;
 
