@@ -62,3 +62,17 @@ th {
     justify-content: center;
     align-items: center;
 }
+img{
+    width: 200px;
+    height: 100px;
+}
+.obraz{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.szkola{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
