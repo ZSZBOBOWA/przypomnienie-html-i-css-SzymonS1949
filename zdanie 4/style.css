@@ -1,28 +1,64 @@
-*{
+* {
     margin: 0;
     padding: 0;
 }
-header{
-    background-color: purple;
-    width: 100%;
-    height: 100px;
 
+header {
+    background-color: purple;
+    height: 100px;
 }
-main{
+
+nav {
     background-color: goldenrod;
     width: 30%;
     height: 450px;
     float: left;
 }
-aside{
+
+main {
     background-color: hotpink;
     width: 70%;
     float: right;
     height: 450px;
 }
-footer{
+
+footer {
     background-color: grey;
-    width: 100%;
     height: 50px;
     clear: both;
+}
+
+.block3 {
+    margin: 10px;
+}
+
+table {
+    margin: 20px;
+    border-collapse: collapse;
+    width: 90%;
+    border: 2px solid black; 
+}
+
+tr:nth-child(odd) {
+    background-color: lightblue;
+}
+
+tr:nth-child(even) {
+    background-color: lightcyan;
+}
+
+td {
+    padding: 10px;
+    width: 1%;
+    border: 1px solid black;
+}
+
+th {
+    border: 2px solid black;
+}
+.plan {
+    color: aqua;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
