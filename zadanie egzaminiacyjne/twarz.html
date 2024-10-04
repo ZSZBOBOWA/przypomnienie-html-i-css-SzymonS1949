@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Salon Kosmetyczny</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<nav>
+    <h2>Nasza oferta</h2>
+    <ol style="margin: 30px;">
+        <li>
+            <a href="twarz.html">oczyszcznie twarzy</a>
+            <ul>
+                <li style="margin-left: 20px;">peeling</li>
+                <li style="margin-left: 20px;">maska</li>
+            </ul>
+        </li>
+        <li>
+            masaż
+        </li>
+        <li>
+            makijaż
+        </li>
+    </ol>
+    <a href="index.html" class="g">Strona głowna</a>
+</nav>
+
+<main>
+    <h1>usługi kosmetyczne</h1>
+</main>
+
+<aside class="twarz">
+    <h3>Kalkulator cenny wizyty</h3>
+<div>
+    <input type="checkbox" name="" id="maska" >
+    <label for="maska">maska</label>
+</div>
+<div>
+    <input type="checkbox" name="" id="peeling">
+    <label for="peeling">peeling</label>
+</div>
+<div>
+    <input type="checkbox" name="" id="twarz">
+    <label for="twarz">maska twarzy</label>
+</div>
+<div>
+    <input type="checkbox" name="" id="makijaż">
+    <label for="makijaż">makijaż</label>
+</div>
+<button>Oblicz cene</button>
+<div id="cena"></div>
+</aside>
+<header>
+    <img src="obraz/obraz1.jpg" alt="" class="1">
+
+</header>
+<footer>
+    <p>Autor</p>
+
+</footer>
+</body>
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    var peelingCheckbox = document.getElementById('peeling');
+    var maskaCheckbox = document.getElementById('maska');
+    var twarzCheckbox = document.getElementById('twarz');
+    var makijazCheckbox = document.getElementById('makijaż');
+    var obliczButton = document.querySelector('button');
+    var wynikAkapit = document.createElement('p');
+    var cenaZabiegow = 0;
+
+    obliczButton.addEventListener('click', function() {
+        cenaZabiegow = 0;
+        if (peelingCheckbox.checked) {
+            cenaZabiegow += 45;
+        }
+        if (maskaCheckbox.checked) {
+            cenaZabiegow += 30;
+        }
+        if (twarzCheckbox.checked) {
+            cenaZabiegow += 20;
+        }
+        if (makijazCheckbox.checked) {
+            cenaZabiegow += 50;
+        }
+        wynikAkapit.innerHTML = 'Cena zabiegów: ' + cenaZabiegow;
+        document.getElementById('cena').appendChild(wynikAkapit);
+    });
+});
+</script>
+</html>
