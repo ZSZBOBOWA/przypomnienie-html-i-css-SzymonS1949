@@ -49,12 +49,12 @@
     <input type="checkbox" name="" id="makijaż">
     <label for="makijaż">makijaż</label>
 </div>
-<button>Oblicz cene</button>
+<button onclick="obliczCene()">Oblicz cene</button>
 <div id="cena"></div>
 </aside>
 <header>
     <img src="obraz/obraz1.jpg" alt="" class="1">
-
+<div id="cena"></div>
 </header>
 <footer>
     <p>Autor</p>
@@ -64,32 +64,27 @@
 
 
 <script>
-document.addEventListener('DOMContentLoaded', function() {
+function obliczCene() {
     var peelingCheckbox = document.getElementById('peeling');
     var maskaCheckbox = document.getElementById('maska');
     var twarzCheckbox = document.getElementById('twarz');
     var makijazCheckbox = document.getElementById('makijaż');
-    var obliczButton = document.querySelector('button');
-    var wynikAkapit = document.createElement('p');
     var cenaZabiegow = 0;
 
-    obliczButton.addEventListener('click', function() {
-        cenaZabiegow = 0;
-        if (peelingCheckbox.checked) {
-            cenaZabiegow += 45;
-        }
-        if (maskaCheckbox.checked) {
-            cenaZabiegow += 30;
-        }
-        if (twarzCheckbox.checked) {
-            cenaZabiegow += 20;
-        }
-        if (makijazCheckbox.checked) {
-            cenaZabiegow += 50;
-        }
-        wynikAkapit.innerHTML = 'Cena zabiegów: ' + cenaZabiegow;
-        document.getElementById('cena').appendChild(wynikAkapit);
-    });
-});
+    cenaZabiegow = 0; 
+    if (peelingCheckbox.checked) {
+        cenaZabiegow += 45;
+    }
+    if (maskaCheckbox.checked) {
+        cenaZabiegow += 30;
+    }
+    if (twarzCheckbox.checked) {
+        cenaZabiegow += 20;
+    }
+    if (makijazCheckbox.checked) {
+        cenaZabiegow += 50;
+    }
+    document.getElementById('cena').innerHTML = 'Cena zabiegów: ' + cenaZabiegow;
+}
 </script>
 </html>

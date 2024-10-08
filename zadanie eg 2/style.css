@@ -1,0 +1,55 @@
+*{
+    margin: 0;
+    padding: 0;
+   
+}
+body{
+    display: inline;
+    font-family: garamond;
+ 
+  
+}
+header , footer{
+    text-align: center;
+    background-color: #8c7b75;
+    font-size: 150%;
+    height: 70px;
+ 
+}
+nav,aside{
+    text-align: center;
+    background-color: #bcaaa4;
+    height: 400px;
+    width: 35%;
+  
+}
+ol{
+    margin-left: 20px;
+    text-align: start;
+}
+nav{
+    float: left;
+}
+aside{
+    float: right;
+}
+main{
+    text-align: center;
+    background-color: #efdcd5;
+    height: 400px;
+    width: 30%;
+    float: left;
+    
+}
+footer{
+
+    clear: both;
+
+}
+h2{
+    margin-top: 30px;
+    text-align: center;
+}
+img{
+    width: 180px;
+}
